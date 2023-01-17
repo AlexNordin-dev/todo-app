@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+/*  Font fråm Google Font --- font-family: 'Roboto'*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
+/*__________Global styles_____________ */
+* {
+  margin: 3px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
+body {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 215, 223);
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+/*__________End global styles_____________ */
+
+
+
+
+/*__________Utility styles_____________ */
+.todobox {
+  height: 90vh;
+  width: 600px;
+  background-color: aliceblue;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+
+.todo-list-output {
+  padding: 10px;
+
+}
+
+.todoLiCreate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  font-size: 1rem;
+
+}
+
+/*__________End utility styles_____________ */
+
+
+
+/*__________Custom styles_____________ */
+.todo-item {
+
+  margin: 0px 15px 0px 10px;
+}
+
+.todo-date-create {
+
+  margin: 0px 15px 0px 10px;
+}
+
+.todo-category-create {
+
+  margin: 0px 15px 0px 10px;
+}
+
+#todo-filter-options-i {
+  margin-right: 240px;
+}
+
+.radioJobb {
+  margin-left: 20px;
+}
+
+.radioH {
+  margin-left: 20px;
+}
+
+.deleteAllTodo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-right: 20px;   
+}
+
+.deleteAllTodoBtn { 
+  color: brown;
+  font-size: 14px;  
+}
+.headerApp{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*__________End Custom styles _____________ */
+
+
+
+/*__________Button styles_____________ */
+.btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: lightcoral;
+  border: none;
+  cursor: pointer;
+  margin: 0px 15px 0px 10px;
+}
+
+.delete-btn:hover {
+  color: red;
+}
+
+.done-btn {
+  background-color: transparent;
+  color: lightseagreen;
+  border: none;
+  cursor: pointer;
+  margin: 0px 15px 0px 10px;
+}
+
+.done-btn:hover {
+  color: green;
+}
+
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.done {
+  opacity: 0.4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*__________End button styles_____________ */
