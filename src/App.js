@@ -6,7 +6,7 @@ import './App.css';
 import GetTodo from './components/GetTodo'
 import ShowTodo from './components/ShowTodo'
 import GetFilterTodo from './components/GetFilterTodo'
-import {DefaulTodotList} from './components/DefaulTodotList'
+
 
 //<<<<<<<<<<___Create Date___>>>>>>>>>>
 let now = new Date();
@@ -55,7 +55,7 @@ function App() {
 
   //____________________Finter and search functions_______________________
   const filterAndSearch= (data) => {
-    console.log('Defaul Todot List: ', DefaulTodotList.map(DefaulTodotList =>DefaulTodotList))
+    //console.log('Defaul Todot List: ', DefaulTodotList.map(DefaulTodotList =>DefaulTodotList))
     if (filter === 'Alla') {
       return data.filter((todo) =>
         todo.text.toLowerCase().includes(search.toLowerCase())
@@ -121,7 +121,7 @@ function App() {
       </div>
 
       <ShowTodo
-        data={filterAndSearch(todos, DefaulTodotList)}
+        data={filterAndSearch(todos)}
         setTodos={setTodos}
         todos={todos}
         />      
