@@ -35,19 +35,19 @@ const GetTodo = ({ inputText, setInputText, inputOption, setInputOption, inputDa
 
     useEffect(() => {
        if (localStorage.getItem(["name"]).length <= 2){
-        DefaulTodotList.forEach((x) => {
+        
             setTodos([
-
-                ...todos,
-                { text: x.text, date: x.date, option: x.option, id: Math.random() * 1000 },
-            ]);
-        });
+                ...DefaulTodotList.map((x) => {
+               
+                return{ text: x.text, date: x.date, option: x.option, id: Math.random() * 1000 }})
+            ])
+        
        }
 
 
     }, []);
 
-    console.log("Get localStorage's length:",localStorage.getItem(["name"]).length <= 2);
+    //console.log("Get localStorage's length:",localStorage.getItem(["name"]).length <= 2);
 
     return (
 
